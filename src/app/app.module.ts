@@ -3,16 +3,34 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { HeaderComponent } from './header/header.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipesItemComponent } from './recipes/recipe-list/recipes-item/recipes-item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { FormsModule } from '@angular/forms';
+import { DropdownDirective } from './shared/dropdown-directive';
+import { ShopListService } from './shopping-list/shop-list.service';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RecipesComponent,
+    HeaderComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipesItemComponent,
+    RecipesItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+    DropdownDirective,
+    RecipeStartComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, FormsModule, AppRoutingModule],
+  providers: [ShopListService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}  
